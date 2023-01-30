@@ -1,4 +1,4 @@
-public entry {
+public class entry {
 
     public string _userAnswer;
     public string _date;

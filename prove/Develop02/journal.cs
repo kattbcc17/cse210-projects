@@ -10,7 +10,7 @@ namespace JournalApp
 {
 	class Journal
 	{
-		private string JournalFile = "MyJournal.txt";
+		private string JournalFile = "Journal.txt";
 		private string TitleArt = @"(\
 (\ 
 \'\ 
@@ -93,6 +93,7 @@ namespace JournalApp
 					WriteLine($"\"{choice}\" is not a valid option. Please choose one of the options available 1 - 4");
 					WaitForKey();
 				}
+
 			} while (!isChoiceValid);
             return choice;
 		}
@@ -100,7 +101,7 @@ namespace JournalApp
 		private void CreateJournalFile()
 		{
 			// Relative to the exe. Create it manually
-			// WriteLine($"Does file exist? {File.Exists("MyJournal.txt")}");
+			// WriteLine($"Does file exist? {File.Exists("Journal.txt")}");
 
 			// If file does not exist, create it!
 			if (!File.Exists(JournalFile))

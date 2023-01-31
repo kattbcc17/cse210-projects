@@ -116,7 +116,7 @@ namespace JournalApp
             BackgroundColor = ConsoleColor.White;
             Clear();
             WriteLine(TitleArt);
-            WriteLine("\nWelcome to the only Journaling App you'll ever need!");
+            WriteLine("\nWelcome to journaling!");
             ReadKey(true);
         }
 
@@ -150,7 +150,7 @@ namespace JournalApp
 			ForegroundColor = ConsoleColor.Black;
 			File.WriteAllText(JournalFile, "");
 
-			WriteLine("\nJournal clared!");
+			WriteLine("\nJournal cleared!");
 			WaitForKey();
 		}
 		private void AddEntry()
@@ -190,7 +190,6 @@ namespace JournalApp
             WriteLine("The journal has been modified!");
             WaitForKey();
         }
-
 
     }
 }

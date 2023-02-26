@@ -24,9 +24,7 @@ class Journal
     foreach (var entry in main_list) {
         string line = $"{entry.timestamp}@{entry.content}@{entry._prompt}";
         outputFile.WriteLine(line);
-    }
-    
-
+    } 
 }
   }
   public void Load() {
@@ -44,19 +42,17 @@ class Journal
         info.content = parts[1];
         info._prompt = parts[2];
         main_list.Add(info);
-        
-
     }
   }
   public void AddEntry(String prompt) {
     Entry info = new Entry();
-    //I have no idea how to make this function work. 
-    //I can't think of an work around. 
+    // I could not figure out how to make this function work.  
     string input;
     
     Console.Write("> ");
     input = Console.ReadLine();
-                // I have no idea how to add the inputs I gave my best try
+    // I could not figure out how to add the inputs as I did in my 
+    // other assignment. I tried my best!
     info.content = input;
     main_list.Add(info);
     info._prompt = prompt;
@@ -123,7 +119,7 @@ class Menu
                 myJournal.AddEntry(prompts_);
             }
             else if (prompt == 2) {
-                Console.WriteLine($"{name}, look what you have been writing:");
+                Console.WriteLine($"{name}, this is what you have so far:");
                 Console.WriteLine("");
                 Console.WriteLine("");
                 foreach (var entry in myJournal.main_list) {
@@ -139,7 +135,7 @@ class Menu
                 myJournal.SaveFile();
             }
             else {
-                Console.WriteLine("Choice not valid, please try again.");
+                Console.WriteLine("Invalid choice, please try again.");
             }
         }
     }

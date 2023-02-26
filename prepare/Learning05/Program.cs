@@ -1,9 +1,16 @@
 using System;
 
-class Program
+namespace JournalApp
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello Learning05 World!");
+        static void Main(string[] args)
+        {
+            Journal myJournal = new Journal();
+            myJournal.Run();
+
+            Menu prompt = new Menu();
+            prompt.Menu();
+        }
     }
 }
